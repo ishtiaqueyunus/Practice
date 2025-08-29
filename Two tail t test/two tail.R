@@ -10,7 +10,9 @@ var.test(x=dataset$Male, y=dataset$Female)
 
 library(ggplot2)
 
-# Reshape using base R
+# Reshape, so both groups plot on the same axis
+# puts Male/Female into one column
+
 long_data <- stack(dataset)
 colnames(long_data) <- c("Score", "Group")
 
